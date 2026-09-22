@@ -3,84 +3,697 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Maria Homem Themudo | Psicóloga Clínica</title>
-  <meta name="description" content="Maria Homem Themudo — Psicóloga Clínica. Consultas para adolescentes e adultos, parentalidade e psicologia da maternidade.">
+
+  <meta name="description" content="Maria Homem Themudo — Psicóloga Clínica. Acompanhamento psicológico de adolescentes e adultos, parentalidade, maternidade, relações e adaptação a mudanças.">
+
+  <style>
+    :root {
+      --fundo: #f7f6f2;
+      --fundo-claro: #fbfaf7;
+      --texto: #242522;
+      --texto-suave: #686a64;
+      --linha: #deded8;
+      --verde: #68766b;
+      --verde-escuro: #4f5d53;
+      --branco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    /* NAVIGAÇAO */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 246, 242, 0.96);
+      border-bottom: 1px solid var(--linha);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 19px;
+      letter-spacing: 0.02em;
+      font-weight: 500;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 12px;
+      color: var(--texto-suave);
+      margin-top: 2px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 14px;
+    }
+
+    nav a {
+      color: var(--texto-suave);
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--texto);
+    }
+
+    .nav-button {
+      padding: 11px 18px;
+      border: 1px solid var(--verde);
+      color: var(--verde-escuro);
+      border-radius: 30px;
+    }
+
+    .nav-button:hover {
+      background: var(--verde);
+      color: white;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--linha);
+    }
+
+    .hero-content {
+      max-width: 800px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 12px;
+      color: var(--verde-escuro);
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 7vw, 88px);
+      line-height: 1.02;
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      margin-bottom: 30px;
+    }
+
+    .hero-text {
+      max-width: 620px;
+      font-size: 20px;
+      line-height: 1.7;
+      color: var(--texto-suave);
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 30px;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--verde);
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: var(--verde-escuro);
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--linha);
+      background: transparent;
+    }
+
+    .button-secondary:hover {
+      border-color: var(--verde);
+    }
+
+    /* SECÇÕES */
+
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--linha);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 80px;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 12px;
+      color: var(--texto-suave);
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.1;
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
+
+    .section-content {
+      max-width: 720px;
+    }
+
+    .section-content p {
+      font-size: 18px;
+      color: var(--texto-suave);
+      margin-bottom: 20px;
+    }
+
+    /* ÁREAS */
+
+    .areas {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--linha);
+      margin-top: 45px;
+    }
+
+    .area {
+      padding: 28px 20px 28px 0;
+      border-bottom: 1px solid var(--linha);
+    }
+
+    .area:nth-child(odd) {
+      border-right: 1px solid var(--linha);
+      padding-right: 35px;
+    }
+
+    .area:nth-child(even) {
+      padding-left: 35px;
+    }
+
+    .area h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .area p {
+      font-size: 15px;
+      color: var(--texto-suave);
+    }
+
+    /* CONSULTAS */
+
+    .consultas-box {
+      background: var(--fundo-claro);
+      border: 1px solid var(--linha);
+      padding: 45px;
+      margin-top: 40px;
+    }
+
+    .consulta-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .info-label {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 11px;
+      color: var(--texto-suave);
+      margin-bottom: 8px;
+    }
+
+    .info-value {
+      font-size: 20px;
+    }
+
+    .booking-note {
+      font-size: 15px;
+      color: var(--texto-suave);
+      max-width: 650px;
+      margin-bottom: 25px;
+    }
+
+    /* CONTACTO */
+
+    .contact {
+      background: var(--verde);
+      color: white;
+    }
+
+    .contact .section-label,
+    .contact p {
+      color: rgba(255,255,255,0.78);
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-size: 20px;
+      margin: 15px 0 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+      padding-bottom: 4px;
+    }
+
+    .contact .button-primary {
+      background: white;
+      color: var(--verde-escuro);
+    }
+
+    .contact .button-primary:hover {
+      background: #f1f1ed;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 0;
+      font-size: 13px;
+      color: var(--texto-suave);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+
+      header {
+        position: static;
+      }
+
+      .nav {
+        padding: 18px 0;
+        align-items: flex-start;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 80px 0;
+      }
+
+      .hero-text {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .areas {
+        grid-template-columns: 1fr;
+      }
+
+      .area:nth-child(odd) {
+        border-right: 0;
+        padding-right: 0;
+      }
+
+      .area:nth-child(even) {
+        padding-left: 0;
+      }
+
+      .consulta-info {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .consultas-box {
+        padding: 30px 24px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
-    <h1>Maria Homem Themudo</h1>
-    <p>Psicóloga Clínica</p>
+    <div class="container nav">
 
-    <nav>
-      <a href="#sobre">Sobre mim</a>
-      <a href="#areas">Áreas de intervenção</a>
-      <a href="#consultas">Consultas</a>
-      <a href="#contactos">Marcar consulta</a>
-    </nav>
+      <a href="#inicio" class="logo">
+        Maria Homem Themudo
+        <span>Psicóloga Clínica</span>
+      </a>
+
+      <nav>
+        <a href="#sobre">Sobre mim</a>
+        <a href="#areas">Áreas de intervenção</a>
+        <a href="#consultas">Consultas</a>
+        <a href="#contacto" class="nav-button">Marcar consulta</a>
+      </nav>
+
+    </div>
   </header>
+
 
   <main>
 
-    <section>
-      <h2>Um espaço para si</h2>
-      <p>
-        Um espaço de escuta, compreensão e acompanhamento psicológico,
-        pensado para ajudar a compreender o que está a viver e encontrar
-        novas formas de lidar com as dificuldades.
-      </p>
-      <a href="#contactos">Marcar consulta</a>
+    <!-- INÍCIO -->
+
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="eyebrow">Psicologia Clínica</div>
+
+          <h1>Um espaço<br>para si.</h1>
+
+          <p class="hero-text">
+            Um espaço de escuta, compreensão e acompanhamento psicológico,
+            pensado para ajudar a compreender o que está a viver e encontrar
+            novas formas de lidar com as dificuldades.
+          </p>
+
+          <div class="buttons">
+            <a
+              href="https://calendar.app.google/kUagTLrthW1sfXRaA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-primary"
+            >
+              Marcar consulta
+            </a>
+
+            <a href="#sobre" class="button button-secondary">
+              Conhecer o meu trabalho
+            </a>
+          </div>
+
+        </div>
+      </div>
     </section>
+
+
+    <!-- SOBRE -->
 
     <section id="sobre">
-      <h2>Sobre mim</h2>
-      <p>
-        Sou Psicóloga Clínica, com experiência no acompanhamento psicológico
-        de adolescentes e adultos e em diferentes contextos de intervenção.
-      </p>
-      <p>
-        O meu trabalho procura criar um espaço seguro, acolhedor e sem
-        julgamentos, adaptado à singularidade de cada pessoa.
-      </p>
+      <div class="container section-grid">
+
+        <div>
+          <div class="section-label">Sobre mim</div>
+        </div>
+
+        <div class="section-content">
+
+          <h2>Um lugar de escuta e acompanhamento.</h2>
+
+          <p>
+            Sou Psicóloga Clínica e acompanho adolescentes e adultos
+            em diferentes momentos e contextos da vida.
+          </p>
+
+          <p>
+            O acompanhamento psicológico pode ser um espaço para parar,
+            olhar para o que está a acontecer e compreender melhor aquilo
+            que está a ser vivido.
+          </p>
+
+          <p>
+            Procuro proporcionar um espaço seguro, acolhedor e sem
+            julgamentos, respeitando o ritmo e a singularidade de cada pessoa.
+          </p>
+
+        </div>
+
+      </div>
     </section>
+
+
+    <!-- ÁREAS -->
 
     <section id="areas">
-      <h2>Áreas de intervenção</h2>
-      <ul>
-        <li>Adolescentes</li>
-        <li>Adultos</li>
-        <li>Parentalidade</li>
-        <li>Psicologia da maternidade</li>
-        <li>Relações e dificuldades emocionais</li>
-        <li>Adaptação a mudanças e momentos de crise</li>
-      </ul>
+      <div class="container">
+
+        <div class="section-grid">
+          <div>
+            <div class="section-label">Áreas de intervenção</div>
+          </div>
+
+          <div class="section-content">
+            <h2>Alguns dos temas que podemos trabalhar.</h2>
+
+            <p>
+              Cada processo é individual. As áreas abaixo são alguns dos
+              motivos pelos quais pode fazer sentido procurar acompanhamento
+              psicológico.
+            </p>
+          </div>
+        </div>
+
+        <div class="areas">
+
+          <div class="area">
+            <h3>Adolescentes</h3>
+            <p>
+              Acompanhamento psicológico em fases de mudança,
+              desenvolvimento e descoberta pessoal.
+            </p>
+          </div>
+
+          <div class="area">
+            <h3>Adultos</h3>
+            <p>
+              Espaço de reflexão e acompanhamento perante dificuldades
+              emocionais e diferentes momentos da vida.
+            </p>
+          </div>
+
+          <div class="area">
+            <h3>Parentalidade</h3>
+            <p>
+              Questões relacionadas com os desafios, dúvidas e
+              transformações associados à parentalidade.
+            </p>
+          </div>
+
+          <div class="area">
+            <h3>Psicologia da maternidade</h3>
+            <p>
+              Acompanhamento durante as transformações emocionais
+              associadas à maternidade.
+            </p>
+          </div>
+
+          <div class="area">
+            <h3>Relações e dificuldades emocionais</h3>
+            <p>
+              Exploração de padrões relacionais, emoções e dificuldades
+              que podem estar a interferir no bem-estar.
+            </p>
+          </div>
+
+          <div class="area">
+            <h3>Mudanças e momentos de crise</h3>
+            <p>
+              Acompanhamento em períodos de transição, adaptação,
+              perda ou mudança.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
     </section>
+
+
+    <!-- CONSULTAS -->
 
     <section id="consultas">
-      <h2>Consultas</h2>
-      <p><strong>Duração:</strong> 50 minutos</p>
-      <p><strong>Valor:</strong> 65€</p>
-      <p>
-        As consultas podem ser realizadas online ou presencialmente,
-        mediante disponibilidade.
-      </p>
+      <div class="container section-grid">
+
+        <div>
+          <div class="section-label">Consultas</div>
+        </div>
+
+        <div class="section-content">
+
+          <h2>Um acompanhamento ao seu ritmo.</h2>
+
+          <p>
+            As consultas têm uma duração de 50 minutos e podem ser realizadas
+            online ou presencialmente, de acordo com a disponibilidade.
+          </p>
+
+          <div class="consultas-box">
+
+            <div class="consulta-info">
+
+              <div>
+                <span class="info-label">Duração</span>
+                <span class="info-value">50 minutos</span>
+              </div>
+
+              <div>
+                <span class="info-label">Valor</span>
+                <span class="info-value">65 €</span>
+              </div>
+
+              <div>
+                <span class="info-label">Modalidade</span>
+                <span class="info-value">Online ou presencial</span>
+              </div>
+
+            </div>
+
+            <p class="booking-note">
+              Para consultar os horários disponíveis e escolher o momento
+              que lhe for mais conveniente, pode utilizar diretamente a
+              agenda de marcações.
+            </p>
+
+            <a
+              href="https://calendar.app.google/kUagTLrthW1sfXRaA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-primary"
+            >
+              Ver horários disponíveis
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
-    <section id="contactos">
-      <h2>Marcar consulta</h2>
-      <p>
-        Para informações ou marcação de consulta, entre em contacto comigo.
-      </p>
-      <p>
-        <strong>Email:</strong> [colocar email]
-      </p>
+
+    <!-- CONTACTO -->
+
+    <section class="contact" id="contacto">
+      <div class="container section-grid">
+
+        <div>
+          <div class="section-label">Marcar consulta</div>
+        </div>
+
+        <div class="section-content">
+
+          <h2>Escolha um horário que lhe seja conveniente.</h2>
+
+          <p>
+            Consulte diretamente a agenda para verificar as disponibilidades
+            e marcar a sua consulta.
+          </p>
+
+          <a
+            href="https://calendar.app.google/kUagTLrthW1sfXRaA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-primary"
+          >
+            Abrir agenda de marcações
+          </a>
+
+          <p style="margin-top: 35px; margin-bottom: 0;">
+            Se preferir entrar em contacto por email:
+          </p>
+
+          <a
+            href="mailto:mariahomemthemudo.psicologia@gmail.com"
+            class="contact-email"
+          >
+            mariahomemthemudo.psicologia@gmail.com
+          </a>
+
+        </div>
+
+      </div>
     </section>
 
   </main>
 
+
   <footer>
-    <p>© Maria Homem Themudo — Psicóloga Clínica</p>
+    <div class="container footer-inner">
+      <div>
+        © Maria Homem Themudo — Psicóloga Clínica
+      </div>
+
+      <div>
+        mariahomemthemudo.pt
+      </div>
+    </div>
   </footer>
 
 </body>
