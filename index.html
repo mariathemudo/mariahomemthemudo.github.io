@@ -205,22 +205,32 @@
       border: 1px solid var(--linha);
     }
 
-    .button-secondary:hover {
-      border-color: var(--azul);
-   }   
-.hero-photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
+    .hero-photo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 .hero-photo img {
-  display: block;
-  width: min(100%, 400px);
-  height: auto;
-  object-fit: contain;
+    display: block;
+    width: min(100%, 500px);
+    height: auto;
+    object-fit: contain;
+
+    -webkit-mask-image:
+        linear-gradient(to bottom,
+            black 70%,
+            transparent 100%
+        );
+    mask-image:
+        linear-gradient(to bottom,
+            black 70%,
+            transparent 100%
+        );
 }
+      
 
     /* SECTIONS */
 
