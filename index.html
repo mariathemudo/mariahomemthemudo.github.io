@@ -207,21 +207,22 @@
 
     .button-secondary:hover {
       border-color: var(--azul);
-    }
+   }   
+.hero-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
 
-    .hero-photo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-photo img {
-      display: block;
-      width: 100%;
-      max-width: 460px;
-      height: auto;
-      object-fit: contain;
-    }
+.hero-photo img {
+  display: block;
+  width: min(100%, 400px);
+  height: auto;
+  object-fit: contain;
+  border-radius: 180px 180px 24px 24px;
+  box-shadow: 0 18px 45px rgba(83, 107, 122, 0.12);
+}
 
     /* SECTIONS */
 
