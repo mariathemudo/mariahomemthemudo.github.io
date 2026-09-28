@@ -128,13 +128,15 @@
     /* HERO */
 
     .hero {
-      min-height: 650px;
-      display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      align-items: center;
-      gap: 70px;
-      padding: 75px 0 85px;
-    }
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 30px;
+  padding: 55px 0 65px;
+  position: relative;
+  overflow: hidden;
+}
 
     .hero-text {
       max-width: 590px;
@@ -206,29 +208,35 @@
     }
 
     .hero-photo {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: -40px;
 }
 
 .hero-photo img {
-    display: block;
-    width: min(100%, 500px);
-    height: auto;
-    object-fit: contain;
+  display: block;
+  width: min(100%, 560px);
+  height: auto;
+  object-fit: contain;
 
-    -webkit-mask-image:
-        linear-gradient(to bottom,
-            black 70%,
-            transparent 100%
-        );
-    mask-image:
-        linear-gradient(to bottom,
-            black 70%,
-            transparent 100%
-        );
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      black 55%,
+      rgba(0, 0, 0, 0.85) 70%,
+      transparent 100%
+    );
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 55%,
+      rgba(0, 0, 0, 0.85) 70%,
+      transparent 100%
+    );
 }
       
 
