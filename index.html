@@ -5,33 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Maria Homem Themudo | Psicóloga Clínica</title>
-
-  <meta
-    name="description"
-    content="Maria Homem Themudo — Psicóloga Clínica. Acompanhamento psicológico de adolescentes e adultos, parentalidade, maternidade, relações e processos de mudança."
-  >
+  <meta name="description" content="Maria Homem Themudo — Psicóloga Clínica. Consultas online para adolescentes e adultos, parentalidade, maternidade, relações e processos de mudança.">
 
   <style>
     :root {
-      --azul: #718796;
-      --azul-escuro: #536b7a;
-      --texto: #263746;
-      --texto-suave: #687985;
-      --linha: #e2e8eb;
+      --azul: #7893a6;
+      --azul-escuro: #587287;
+      --texto: #334957;
+      --texto-suave: #71818b;
+      --linha: #e8edf0;
       --fundo: #ffffff;
-      --fundo-suave: #f7f9fa;
       --branco: #ffffff;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -40,10 +29,7 @@
       line-height: 1.7;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     .container {
       width: min(1180px, 90%);
@@ -51,21 +37,19 @@
     }
 
     /* HEADER */
-
     header {
-      background: rgba(255, 255, 255, 0.97);
-      border-bottom: 1px solid var(--linha);
+      background: #fff;
       position: sticky;
       top: 0;
       z-index: 100;
     }
 
     .nav {
-      min-height: 92px;
+      min-height: 96px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 35px;
     }
 
     .brand {
@@ -77,15 +61,15 @@
 
     .brand-name {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 23px;
-      letter-spacing: 0.2px;
-      color: var(--texto);
+      font-size: 25px;
+      letter-spacing: .1px;
+      color: var(--azul-escuro);
     }
 
     .brand-subtitle {
-      margin-top: 7px;
+      margin-top: 8px;
       font-size: 10px;
-      letter-spacing: 2.5px;
+      letter-spacing: 3px;
       color: var(--azul);
       font-weight: 600;
     }
@@ -93,161 +77,173 @@
     .menu {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 30px;
       font-size: 14px;
       color: var(--texto-suave);
     }
 
-    .menu a {
-      transition: color 0.2s ease;
-    }
-
-    .menu a:hover {
-      color: var(--azul-escuro);
-    }
-
-    .menu-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 21px;
-      border: 1px solid var(--azul);
-      background: var(--azul);
-      color: var(--branco);
-      border-radius: 2px;
-      font-size: 13px;
-      letter-spacing: 0.2px;
-      transition: background 0.2s ease, border-color 0.2s ease;
-    }
-
-    .menu-button:hover {
-      background: var(--azul-escuro);
-      border-color: var(--azul-escuro);
-    }
+    .menu a { transition: color .2s ease; }
+    .menu a:hover { color: var(--azul-escuro); }
 
     /* HERO */
-
     .hero {
-      min-height: 650px;
+      min-height: 675px;
       display: grid;
-      grid-template-columns: 1fr 0.9fr;
+      grid-template-columns: 1fr 1.05fr;
       align-items: center;
-      gap: 70px;
-      padding: 75px 0 85px;
+      position: relative;
+      overflow: hidden;
+      padding: 40px 0 55px;
     }
 
     .hero-text {
-      max-width: 590px;
+      position: relative;
+      z-index: 2;
+      padding-bottom: 20px;
     }
 
-    .eyebrow {
-      color: var(--azul);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 24px;
+    .hero-line {
+      width: 58px;
+      height: 1px;
+      background: var(--azul);
+      margin-bottom: 30px;
     }
 
     .hero h1 {
       font-family: Georgia, "Times New Roman", serif;
       font-weight: 400;
-      font-size: clamp(48px, 5.2vw, 72px);
-      line-height: 1.06;
-      letter-spacing: -1.5px;
-      color: var(--texto);
-      margin-bottom: 25px;
-    }
-
-    .hero h1 span {
+      font-size: clamp(50px, 5.5vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -1.8px;
       color: var(--azul-escuro);
-    }
-
-    .hero-text p {
-      max-width: 530px;
-      font-size: 17px;
-      line-height: 1.85;
-      color: var(--texto-suave);
+      max-width: 610px;
       margin-bottom: 34px;
     }
 
+    .hero h1 span {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .eyebrow {
+      color: #91aabd;
+      font-size: 13px;
+      letter-spacing: 4px;
+      margin-bottom: 25px;
+    }
+
     .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
+      margin-top: 25px;
     }
 
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 24px;
-      border-radius: 2px;
-      font-size: 13px;
-      font-weight: 600;
-      transition: all 0.2s ease;
+      gap: 18px;
+      padding: 15px 28px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all .2s ease;
     }
 
     .button-primary {
       background: var(--azul);
       color: white;
       border: 1px solid var(--azul);
+      min-width: 275px;
     }
 
     .button-primary:hover {
       background: var(--azul-escuro);
       border-color: var(--azul-escuro);
+      transform: translateY(-1px);
     }
 
-    .button-secondary {
-      background: white;
+    .arrow {
+      font-size: 22px;
+      line-height: 0;
+      font-weight: 300;
+    }
+
+    .hero-details {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 25px;
       color: var(--azul-escuro);
-      border: 1px solid var(--linha);
+      font-size: 14px;
+    }
+
+    .clock {
+      width: 28px;
+      height: 28px;
+      border: 1.5px solid var(--azul);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
     }
 
     .hero-photo {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-}
+      position: relative;
+      align-self: stretch;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-right: -40px;
+    }
 
-.hero-photo img {
-    display: block;
-    width: min(100%, 500px);
-    height: auto;
-    object-fit: contain;
+    .hero-photo::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        #fff 0%,
+        rgba(255,255,255,.92) 9%,
+        rgba(255,255,255,0) 36%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
 
-    -webkit-mask-image:
-        linear-gradient(to bottom,
-            black 70%,
-            transparent 100%
-        );
-    mask-image:
-        linear-gradient(to bottom,
-            black 70%,
-            transparent 100%
-        );
-}
-      
+    .hero-photo img {
+      position: relative;
+      z-index: 0;
+      display: block;
+      width: min(760px, 100%);
+      height: 650px;
+      object-fit: cover;
+      object-position: center top;
+      -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 13%,
+        black 100%
+      );
+      mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 13%,
+        black 100%
+      );
+    }
 
     /* SECTIONS */
-
-    section {
-      scroll-margin-top: 100px;
-    }
+    section { scroll-margin-top: 100px; }
 
     .section {
-      padding: 100px 0;
-    }
-
-    .section-soft {
-      background: var(--fundo-suave);
+      padding: 105px 0;
+      border-top: 1px solid var(--linha);
+      background: #fff;
     }
 
     .section-header {
-      max-width: 690px;
+      max-width: 720px;
       margin-bottom: 52px;
     }
 
@@ -262,44 +258,39 @@
 
     .section h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(34px, 4vw, 48px);
+      font-size: clamp(36px, 4vw, 50px);
       line-height: 1.15;
       font-weight: 400;
-      color: var(--texto);
+      color: var(--azul-escuro);
       margin-bottom: 20px;
     }
 
-    .section-header p {
+    .section-header p,
+    .about-text p,
+    .consultas-text p {
       color: var(--texto-suave);
       font-size: 16px;
-      line-height: 1.85;
+      line-height: 1.9;
     }
 
     /* SOBRE */
-
     .about-grid {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
+      grid-template-columns: .8fr 1.2fr;
       gap: 80px;
       align-items: start;
     }
 
     .about-intro {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
+      font-size: 29px;
       line-height: 1.45;
       color: var(--azul-escuro);
     }
 
-    .about-text p {
-      color: var(--texto-suave);
-      font-size: 16px;
-      line-height: 1.9;
-      margin-bottom: 20px;
-    }
+    .about-text p { margin-bottom: 20px; }
 
     /* ÁREAS */
-
     .areas-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -309,9 +300,9 @@
     }
 
     .area {
-      background: white;
+      background: #fff;
       padding: 34px 30px;
-      min-height: 185px;
+      min-height: 190px;
     }
 
     .area-number {
@@ -337,19 +328,11 @@
     }
 
     /* CONSULTAS */
-
     .consultas-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
+      gap: 80px;
       align-items: center;
-    }
-
-    .consultas-text p {
-      color: var(--texto-suave);
-      font-size: 16px;
-      line-height: 1.9;
-      margin-bottom: 24px;
     }
 
     .details {
@@ -366,20 +349,13 @@
       font-size: 14px;
     }
 
-    .detail span:first-child {
-      color: var(--texto-suave);
-    }
-
-    .detail span:last-child {
-      color: var(--texto);
-      font-weight: 600;
-      text-align: right;
-    }
+    .detail span:first-child { color: var(--texto-suave); }
+    .detail span:last-child { color: var(--texto); font-weight: 600; }
 
     .booking-box {
-      background: var(--fundo-suave);
       border: 1px solid var(--linha);
       padding: 50px 45px;
+      background: #fff;
     }
 
     .booking-box h3 {
@@ -388,6 +364,7 @@
       font-weight: 400;
       line-height: 1.25;
       margin-bottom: 18px;
+      color: var(--azul-escuro);
     }
 
     .booking-box p {
@@ -398,7 +375,6 @@
     }
 
     /* CONTACTOS */
-
     .contact-box {
       border-top: 1px solid var(--linha);
       border-bottom: 1px solid var(--linha);
@@ -414,6 +390,7 @@
       font-size: 30px;
       font-weight: 400;
       margin-bottom: 10px;
+      color: var(--azul-escuro);
     }
 
     .contact-box p {
@@ -429,12 +406,12 @@
     }
 
     /* FOOTER */
-
     footer {
       border-top: 1px solid var(--linha);
       padding: 30px 0;
       color: var(--texto-suave);
       font-size: 12px;
+      background: #fff;
     }
 
     .footer-inner {
@@ -445,7 +422,6 @@
     }
 
     /* RESPONSIVO */
-
     @media (max-width: 900px) {
       .nav {
         min-height: auto;
@@ -463,20 +439,31 @@
 
       .hero {
         grid-template-columns: 1fr;
-        gap: 45px;
-        padding: 65px 0 70px;
+        gap: 10px;
+        padding: 55px 0 20px;
       }
 
-      .hero-text {
-        max-width: none;
-      }
+      .hero-text { padding-bottom: 0; }
 
       .hero-photo {
-        justify-content: flex-start;
+        min-height: 480px;
+        margin-right: 0;
+        justify-content: center;
       }
 
       .hero-photo img {
-        max-width: 430px;
+        width: 100%;
+        height: 500px;
+        -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+      }
+
+      .hero-photo::before {
+        background: linear-gradient(
+          to bottom,
+          #fff 0%,
+          rgba(255,255,255,0) 18%
+        );
       }
 
       .about-grid,
@@ -485,56 +472,46 @@
         gap: 40px;
       }
 
-      .areas-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+      .areas-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 620px) {
-      .container {
-        width: min(92%, 1180px);
-      }
+      .container { width: 92%; }
 
-      .brand-name {
-        font-size: 20px;
-      }
+      .brand-name { font-size: 21px; }
 
-      .menu-button {
-        padding: 10px 15px;
-      }
+      .menu { font-size: 13px; }
 
       .hero {
-        padding-top: 48px;
+        padding-top: 45px;
       }
 
       .hero h1 {
-        font-size: 45px;
+        font-size: 46px;
       }
 
-      .hero-text p {
-        font-size: 16px;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .button {
+      .button-primary {
         width: 100%;
+        min-width: 0;
       }
 
-      .section {
-        padding: 75px 0;
+      .hero-details {
+        margin-bottom: 10px;
       }
 
-      .areas-grid {
-        grid-template-columns: 1fr;
+      .hero-photo {
+        min-height: 410px;
       }
 
-      .booking-box {
-        padding: 35px 25px;
+      .hero-photo img {
+        height: 430px;
       }
+
+      .section { padding: 75px 0; }
+
+      .areas-grid { grid-template-columns: 1fr; }
+
+      .booking-box { padding: 35px 25px; }
 
       .contact-box {
         flex-direction: column;
@@ -553,90 +530,77 @@
 
   <header>
     <div class="container nav">
-
       <a href="#top" class="brand">
         <span class="brand-name">Maria Homem Themudo</span>
         <span class="brand-subtitle">PSICÓLOGA CLÍNICA</span>
       </a>
 
       <nav class="menu">
+        <a href="#top">Início</a>
         <a href="#sobre">Sobre mim</a>
         <a href="#areas">Áreas de intervenção</a>
-        <a href="#consultas">Consultas</a>
+        <a href="#consultas">Marcar consulta</a>
         <a href="#contactos">Contactos</a>
-        <a href="#consultas" class="menu-button">Marcar consulta</a>
       </nav>
-
     </div>
   </header>
-
 
   <main id="top">
 
     <!-- HERO -->
-
     <section class="container hero">
 
       <div class="hero-text">
-
-        <div class="eyebrow">Psicologia Clínica</div>
+        <div class="hero-line"></div>
 
         <h1>
-          Um espaço para
+          Um espaço para<br>
           <span>se escutar.</span>
         </h1>
 
-        <p>
-          Acompanhamento psicológico individual, num espaço de
-          escuta, reflexão e construção de novas possibilidades.
-        </p>
+        <div class="eyebrow">Consulta online</div>
 
         <div class="hero-actions">
-          <a href="#consultas" class="button button-primary">
-            Marcar consulta
-          </a>
-
-          <a href="#sobre" class="button button-secondary">
-            Conhecer o meu trabalho
+          <a href="https://calendar.app.google/kUagTLrthW1sfXRaA"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="button button-primary">
+            Quero marcar consulta
+            <span class="arrow">→</span>
           </a>
         </div>
 
+        <div class="hero-details">
+          <span class="clock">◷</span>
+          <span>50 minutos</span>
+          <span>|</span>
+          <span>65 €</span>
+        </div>
       </div>
 
       <div class="hero-photo">
-        <img
-          src="Maria%20Themudo%20_%20fotografia.png"
-          alt="Maria Homem Themudo, Psicóloga Clínica"
-        >
+        <img src="Maria%20Themudo%20-%20fotografia%20site.png"
+             alt="Maria Homem Themudo, Psicóloga Clínica">
       </div>
 
     </section>
 
-
     <!-- SOBRE -->
-
-    <section id="sobre" class="section section-soft">
-
+    <section id="sobre" class="section">
       <div class="container">
 
         <div class="section-header">
           <div class="section-label">Sobre mim</div>
-
-          <h2>
-            Um espaço de confiança,
-            escuta e reflexão.
-          </h2>
+          <h2>Um espaço de confiança,<br>escuta e reflexão.</h2>
         </div>
 
         <div class="about-grid">
-
           <div class="about-intro">
             A psicoterapia pode ser um espaço para parar, compreender
             o que está a acontecer e encontrar novas formas de estar.
           </div>
 
           <div class="about-text">
-
             <p>
               Enquanto Psicóloga Clínica, procuro proporcionar um espaço
               seguro e acolhedor, onde cada pessoa possa falar livremente
@@ -654,30 +618,19 @@
               atuais, mas também os recursos e possibilidades que cada
               pessoa possui para lidar com os diferentes momentos da vida.
             </p>
-
           </div>
-
         </div>
 
       </div>
-
     </section>
 
-
     <!-- ÁREAS -->
-
     <section id="areas" class="section">
-
       <div class="container">
 
         <div class="section-header">
           <div class="section-label">Áreas de intervenção</div>
-
-          <h2>
-            Diferentes momentos,
-            diferentes necessidades.
-          </h2>
-
+          <h2>Diferentes momentos,<br>diferentes necessidades.</h2>
           <p>
             O acompanhamento psicológico pode ser procurado em diferentes
             fases da vida e perante diferentes desafios.
@@ -741,28 +694,19 @@
           </article>
 
         </div>
-
       </div>
-
     </section>
 
-
     <!-- CONSULTAS -->
-
-    <section id="consultas" class="section section-soft">
-
+    <section id="consultas" class="section">
       <div class="container">
 
         <div class="consultas-grid">
 
           <div class="consultas-text">
+            <div class="section-label">Marcar consulta</div>
 
-            <div class="section-label">Consultas</div>
-
-            <h2>
-              Um acompanhamento
-              ao seu ritmo.
-            </h2>
+            <h2>Um acompanhamento<br>ao seu ritmo.</h2>
 
             <p>
               As consultas são um espaço individual de acompanhamento
@@ -771,7 +715,6 @@
             </p>
 
             <div class="details">
-
               <div class="detail">
                 <span>Duração</span>
                 <span>50 minutos</span>
@@ -784,99 +727,64 @@
 
               <div class="detail">
                 <span>Modalidade</span>
-                <span>Online e presencial</span>
+                <span>Online</span>
               </div>
-
             </div>
-
           </div>
 
-
           <div class="booking-box">
+            <div class="section-label">Agendamento</div>
 
-            <div class="section-label">Marcar consulta</div>
-
-            <h3>
-              Escolha um horário que lhe seja conveniente.
-            </h3>
+            <h3>Escolha um horário que lhe seja conveniente.</h3>
 
             <p>
               Consulte diretamente a agenda de marcações e veja os
               horários disponíveis em tempo real.
             </p>
 
-            <a
-              href="https://calendar.app.google/kUagTLrthW1sfXRaA"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button button-primary"
-            >
+            <a href="https://calendar.app.google/kUagTLrthW1sfXRaA"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="button button-primary">
               Abrir agenda de marcações
+              <span class="arrow">→</span>
             </a>
-
           </div>
 
         </div>
-
       </div>
-
     </section>
 
-
     <!-- CONTACTOS -->
-
     <section id="contactos" class="section">
-
       <div class="container">
 
         <div class="section-header">
           <div class="section-label">Contactos</div>
-
-          <h2>
-            Estou disponível para esclarecer
-            qualquer questão.
-          </h2>
+          <h2>Estou disponível para esclarecer<br>qualquer questão.</h2>
         </div>
 
         <div class="contact-box">
-
           <div>
             <h3>Contacto por email</h3>
-            <p>
-              Para informações ou questões sobre o acompanhamento psicológico.
-            </p>
+            <p>Para informações ou questões sobre o acompanhamento psicológico.</p>
           </div>
 
-          <a
-            href="mailto:mariahomemthemudo.psicologia@gmail.com"
-            class="email"
-          >
+          <a href="mailto:mariahomemthemudo.psicologia@gmail.com" class="email">
             mariahomemthemudo.psicologia@gmail.com
           </a>
-
         </div>
 
       </div>
-
     </section>
 
   </main>
 
-
   <footer>
-
     <div class="container footer-inner">
-
-      <span>
-        © Maria Homem Themudo — Psicóloga Clínica
-      </span>
-
-      <span>
-        Psicologia Clínica
-      </span>
-
+      <span>© Maria Homem Themudo — Psicóloga Clínica</span>
+      <span>Psicologia Clínica</span>
     </div>
-
   </footer>
 
 </body>
