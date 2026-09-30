@@ -276,8 +276,8 @@
     /* SOBRE */
     .about-grid {
       display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 80px;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 90px;
       align-items: start;
     }
 
@@ -285,24 +285,32 @@
       grid-column: 1;
     }
 
+    .about-bio .section-label {
+      margin-bottom: 26px;
+    }
+
     .about-bio-title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 23px;
-      line-height: 1.55;
-      color: var(--azul-escuro);
-      max-width: 360px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--texto-suave);
+      max-width: none;
+      margin-bottom: 24px;
     }
 
     .about-content {
       grid-column: 2;
+      padding-top: 38px;
     }
 
     .about-intro {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 29px;
-      line-height: 1.45;
+      font-size: clamp(30px, 3vw, 42px);
+      line-height: 1.35;
+      font-weight: 400;
       color: var(--azul-escuro);
-      margin-bottom: 28px;
+      margin-bottom: 0;
+      max-width: 430px;
     }
 
     .about-text p { margin-bottom: 20px; }
@@ -533,6 +541,10 @@
         grid-column: 1;
       }
 
+      .about-content {
+        padding-top: 0;
+      }
+
       .about-bio-title {
         max-width: 100%;
       }
@@ -655,14 +667,9 @@
         <div class="about-grid">
           <div class="about-bio">
             <div class="section-label">Sobre mim</div>
-            <div class="about-bio-title">Sou Psicóloga Clínica, com Mestrado em Psicologia Clínica pelo ISPA – Instituto Universitário de Ciências Psicológicas, Sociais e da Vida, e membro da Ordem dos Psicólogos Portugueses.</div>
-          </div>
 
-          <div class="about-content">
-            <div class="about-intro">
-              A consulta de psicologia pode ser um espaço para parar,
-              compreender o que está a acontecer e promover mudanças
-              de forma estruturada e consistente.
+            <div class="about-bio-title">
+              <strong>Sou Psicóloga Clínica, com Mestrado em Psicologia Clínica pelo ISPA – Instituto Universitário de Ciências Psicológicas, Sociais e da Vida, e membro da Ordem dos Psicólogos Portugueses.</strong>
             </div>
 
             <div class="about-text">
@@ -691,6 +698,14 @@
                 espaço de apoio e reflexão que permita compreender, transformar
                 e avançar.
               </p>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <div class="about-intro">
+              A consulta de psicologia pode ser um espaço para parar,
+              compreender o que está a acontecer e promover mudanças
+              de forma estruturada e consistente.
             </div>
           </div>
         </div>
