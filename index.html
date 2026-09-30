@@ -30,11 +30,7 @@
     }
     .hero-text { position: relative; z-index: 2; padding-bottom: 20px; width: 100%; display: flex; flex-direction: column; align-items: center; }
     .hero-line { width: 58px; height: 1px; background: var(--azul); margin-bottom: 30px; }
-    .hero h1 {
-      font-family: Georgia, "Times New Roman", serif; font-weight: 400;
-      font-size: clamp(44px, 4.8vw, 68px); line-height: 1.08;
-      letter-spacing: -1.2px; color: var(--azul-escuro); margin-bottom: 34px;
-    }
+    .hero-logo { width: min(520px, 78vw); height: auto; display: block; margin-bottom: 34px; }
     .hero h1 span {
       display: inline-block; margin-top: 10px; font-family: Arial, Helvetica, sans-serif;
       font-weight: 400; font-size: .36em; letter-spacing: 3px; text-transform: uppercase; color: var(--azul);
@@ -97,7 +93,6 @@
     @media (max-width: 620px) {
       .container { width: 92%; } .brand-logo { width: 135px; } .menu { font-size: 13px; }
       .hero { padding-top: 45px; min-height: 500px; }
-      .hero h1 { font-size: 46px; }
       .button-primary { width: 100%; min-width: 0; }
       .section { padding: 75px 0; } .areas-grid { grid-template-columns: 1fr; }
       .contact-options { grid-template-columns: 1fr; } .booking-box { padding: 35px 25px; }
@@ -108,9 +103,7 @@
 <body>
 <header>
   <div class="container nav">
-    <a href="#top" class="brand" aria-label="Maria Homem Themudo — Psicóloga Clínica">
-      <img class="brand-logo" src="logo-maria-homem-themudo.svg" alt="Maria Homem Themudo — Psicóloga Clínica">
-    </a>
+    <a href="#top" class="brand" aria-label="Maria Homem Themudo — Psicóloga Clínica"></a>
     <nav class="menu">
       <a href="#top">Início</a><a href="#sobre">Sobre mim</a><a href="#areas">Áreas de intervenção</a><a href="#consultas">Marcar consulta</a><a href="#contactos">Contactos</a>
     </nav>
@@ -120,7 +113,7 @@
 <section class="container hero">
   <div class="hero-text">
     <div class="hero-line"></div>
-    <h1>Maria Homem Themudo<br><span>Psicóloga Clínica</span></h1>
+    <img class="hero-logo" src="logo-maria-homem-themudo.svg" alt="Maria Homem Themudo — Psicóloga Clínica">
     <div class="eyebrow">Consultas online</div>
     <div class="hero-actions"><a href="https://calendar.app.google/6eTbAqkoNmY1NhzY6" target="_blank" rel="noopener noreferrer" class="button button-primary">Quero marcar consulta <span class="arrow">→</span></a></div>
   </div>
@@ -164,6 +157,6 @@
   </div>
 </div></section>
 </main>
-<footer><div class="container footer-inner"><div class="footer-professional"><strong>Maria Homem Themudo — Psicóloga Clínica</strong><img class="cedula-image" src="numero-cedula.png" alt="Cédula profissional"></div><span>© Maria Homem Themudo</span></div></footer>
+<footer><div class="container footer-inner"><div class="footer-professional"><strong>Maria Homem Themudo — Psicóloga Clínica</strong><img class="cedula-image" src="numero-cedula.png?v=2" alt="Cédula profissional"></div><span>© Maria Homem Themudo</span></div></footer>
 </body>
 </html>
