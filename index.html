@@ -440,25 +440,7 @@
     }
 
     .contact-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      padding: 15px 28px;
-      border: 1px solid var(--azul);
-      border-radius: 30px;
-      background: var(--azul);
-      color: #fff;
-      font-size: 14px;
-      font-weight: 500;
-      transition: all .2s ease;
-    }
-
-    .contact-button:hover {
-      background: var(--azul-escuro);
-      border-color: var(--azul-escuro);
-      color: #fff;
-      transform: translateY(-1px);
+      min-width: 0;
     }
 
     /* FOOTER */
@@ -869,7 +851,7 @@
           <div class="contact-card">
             <h3>Email</h3>
             <p>mariahomemthemudo.psicologia@gmail.com</p>
-            <a href="mailto:mariahomemthemudo.psicologia@gmail.com" class="contact-button">
+            <a href="mailto:mariahomemthemudo.psicologia@gmail.com" class="button button-primary contact-button">
               Enviar email
               <span class="arrow">→</span>
             </a>
@@ -881,7 +863,7 @@
             <a href="https://wa.me/351916478641"
                target="_blank"
                rel="noopener noreferrer"
-               class="contact-button">
+               class="button button-primary contact-button">
               Enviar mensagem pelo WhatsApp
               <span class="arrow">→</span>
             </a>
