@@ -17,7 +17,8 @@
     .container { width: min(1180px, 90%); margin: 0 auto; }
     header { background: #fff; position: sticky; top: 0; z-index: 100; }
     .nav { min-height: 96px; display: flex; align-items: center; justify-content: space-between; gap: 35px; }
-    .brand { display: flex; flex-direction: column; line-height: 1.15; flex-shrink: 0; }
+    .brand { display: flex; align-items: center; flex-shrink: 0; }
+    .brand-logo { width: 155px; height: auto; display: block; }
     .brand-name { font-family: Georgia, "Times New Roman", serif; font-size: 25px; color: var(--azul-escuro); }
     .brand-subtitle { margin-top: 8px; font-size: 10px; letter-spacing: 3px; color: var(--azul); font-weight: 600; }
     .menu { display: flex; align-items: center; gap: 30px; font-size: 14px; color: var(--texto-suave); }
@@ -93,7 +94,7 @@
       .areas-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 620px) {
-      .container { width: 92%; } .brand-name { font-size: 21px; } .menu { font-size: 13px; }
+      .container { width: 92%; } .brand-logo { width: 135px; } .menu { font-size: 13px; }
       .hero { padding-top: 45px; min-height: 500px; }
       .hero h1 { font-size: 46px; }
       .button-primary { width: 100%; min-width: 0; }
@@ -106,9 +107,8 @@
 <body>
 <header>
   <div class="container nav">
-    <a href="#top" class="brand">
-      <span class="brand-name">Maria Homem Themudo</span>
-      <span class="brand-subtitle">PSICÓLOGA CLÍNICA</span>
+    <a href="#top" class="brand" aria-label="Maria Homem Themudo — Psicóloga Clínica">
+      <img class="brand-logo" src="logo-maria-homem-themudo.svg" alt="Maria Homem Themudo — Psicóloga Clínica">
     </a>
     <nav class="menu">
       <a href="#top">Início</a><a href="#sobre">Sobre mim</a><a href="#areas">Áreas de intervenção</a><a href="#consultas">Marcar consulta</a><a href="#contactos">Contactos</a>
