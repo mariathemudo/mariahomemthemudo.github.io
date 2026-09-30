@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 438" role="img" aria-labelledby="title desc">
+  <title id="title">Maria Homem Themudo — Psicóloga Clínica</title>
+  <desc id="desc">Logótipo minimalista em azul, com monograma MT e o nome Maria Homem Themudo.</desc>
+  <rect width="800" height="438" fill="#ffffff"/>
+  <g fill="#173f70" text-anchor="middle">
+    <text x="400" y="128" font-family="Georgia, 'Times New Roman', serif" font-size="150" letter-spacing="18">MT</text>
+    <text x="400" y="205" font-family="Arial, Helvetica, sans-serif" font-size="20" letter-spacing="9">MARIA HOMEM THEMUDO</text>
+    <text x="400" y="335" font-family="Georgia, 'Times New Roman', serif" font-size="150" letter-spacing="18">MT</text>
+    <text x="400" y="398" font-family="Arial, Helvetica, sans-serif" font-size="19" letter-spacing="8">PSICÓLOGA CLÍNICA</text>
+  </g>
+</svg>
