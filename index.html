@@ -281,11 +281,16 @@
       align-items: start;
     }
 
+    .about-content {
+      grid-column: 2;
+    }
+
     .about-intro {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 29px;
       line-height: 1.45;
       color: var(--azul-escuro);
+      margin-bottom: 28px;
     }
 
     .about-text p { margin-bottom: 20px; }
@@ -375,40 +380,67 @@
     }
 
     /* CONTACTOS */
-    .contact-box {
-      border-top: 1px solid var(--linha);
-      border-bottom: 1px solid var(--linha);
-      padding: 45px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 40px;
+    .contact-intro {
+      max-width: 760px;
     }
 
-    .contact-box h3 {
+    .contact-intro p {
+      color: var(--texto-suave);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .contact-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--linha);
+      border: 1px solid var(--linha);
+    }
+
+    .contact-card {
+      background: #fff;
+      padding: 36px 32px;
+    }
+
+    .contact-card h3 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
+      font-size: 25px;
       font-weight: 400;
       margin-bottom: 10px;
       color: var(--azul-escuro);
     }
 
-    .contact-box p {
+    .contact-card p {
       color: var(--texto-suave);
-      font-size: 15px;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 22px;
+      word-break: break-word;
     }
 
-    .email {
+    .contact-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 12px 20px;
+      border: 1px solid var(--azul);
+      border-radius: 30px;
       color: var(--azul-escuro);
-      font-size: 15px;
-      border-bottom: 1px solid var(--azul);
-      padding-bottom: 3px;
+      font-size: 14px;
+      transition: all .2s ease;
+    }
+
+    .contact-button:hover {
+      background: var(--azul);
+      color: #fff;
     }
 
     /* FOOTER */
     footer {
       border-top: 1px solid var(--linha);
-      padding: 30px 0;
+      padding: 34px 0;
       color: var(--texto-suave);
       font-size: 12px;
       background: #fff;
@@ -417,8 +449,20 @@
     .footer-inner {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
+      gap: 30px;
       align-items: center;
+    }
+
+    .footer-professional {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      color: var(--texto-suave);
+    }
+
+    .footer-professional strong {
+      color: var(--azul-escuro);
+      font-weight: 500;
     }
 
     /* RESPONSIVO */
@@ -472,6 +516,10 @@
         gap: 40px;
       }
 
+      .about-content {
+        grid-column: 1;
+      }
+
       .areas-grid { grid-template-columns: 1fr 1fr; }
     }
 
@@ -510,6 +558,10 @@
       .section { padding: 75px 0; }
 
       .areas-grid { grid-template-columns: 1fr; }
+
+      .contact-options {
+        grid-template-columns: 1fr;
+      }
 
       .booking-box { padding: 35px 25px; }
 
@@ -558,10 +610,10 @@
           <span>se escutar.</span>
         </h1>
 
-        <div class="eyebrow">Consulta online</div>
+        <div class="eyebrow">Consultas online</div>
 
         <div class="hero-actions">
-          <a href="https://calendar.app.google/kUagTLrthW1sfXRaA"
+          <a href="https://calendar.app.google/6eTbAqkoNmY1NhzY6"
              target="_blank"
              rel="noopener noreferrer"
              class="button button-primary">
@@ -570,12 +622,6 @@
           </a>
         </div>
 
-        <div class="hero-details">
-          <span class="clock">◷</span>
-          <span>50 minutos</span>
-          <span>|</span>
-          <span>65 €</span>
-        </div>
       </div>
 
       <div class="hero-photo">
@@ -591,33 +637,50 @@
 
         <div class="section-header">
           <div class="section-label">Sobre mim</div>
-          <h2>Um espaço de confiança,<br>escuta e reflexão.</h2>
+          <h2>Uma oportunidade de crescer<br>e transformar</h2>
         </div>
 
         <div class="about-grid">
-          <div class="about-intro">
-            A psicoterapia pode ser um espaço para parar, compreender
-            o que está a acontecer e encontrar novas formas de estar.
-          </div>
+          <div class="about-content">
+            <div class="about-intro">
+              A consulta de psicologia pode ser um espaço para parar,
+              compreender o que está a acontecer e promover mudanças
+              de forma estruturada e consistente.
+            </div>
 
-          <div class="about-text">
-            <p>
-              Enquanto Psicóloga Clínica, procuro proporcionar um espaço
-              seguro e acolhedor, onde cada pessoa possa falar livremente
-              sobre aquilo que a preocupa, sem julgamentos.
-            </p>
+            <div class="about-text">
+              <p>
+                Sou Psicóloga Clínica, com Mestrado em Psicologia Clínica pelo ISPA –
+                Instituto Universitário de Ciências Psicológicas, Sociais e da Vida,
+                e membro da Ordem dos Psicólogos Portugueses.
+              </p>
 
-            <p>
-              O acompanhamento psicológico é construído de forma
-              individualizada, respeitando o ritmo, a história e as
-              necessidades de cada pessoa.
-            </p>
+              <p>
+                Ao longo do meu percurso profissional, adquiri experiência em
+                diferentes contextos, nomeadamente nas áreas da saúde, educação e
+                intervenção comunitária, procurando sempre promover o bem-estar
+                psicológico e o desenvolvimento de cada pessoa.
+              </p>
 
-            <p>
-              Acredito na importância de compreender as dificuldades
-              atuais, mas também os recursos e possibilidades que cada
-              pessoa possui para lidar com os diferentes momentos da vida.
-            </p>
+              <p>
+                Acredito no processo psicológico como uma oportunidade para nos
+                compreendermos melhor. Centrada na singularidade de cada pessoa,
+                procuro, através da relação terapêutica, criar um espaço seguro
+                onde seja possível olhar para si de novas formas, desenvolver
+                recursos e abrir novas possibilidades.
+              </p>
+
+              <p>
+                A minha base de trabalho é psicodinâmica, mas integro diferentes
+                conhecimentos e abordagens, adaptando a intervenção à história,
+                às necessidades e ao momento particular de cada pessoa. Acredito
+                que, quando estamos em sofrimento, nem sempre é fácil mudar
+                sozinhos padrões de pensamento, emoções e comportamentos. O
+                acompanhamento psicológico pode, nesse sentido, constituir um
+                espaço de apoio e reflexão que permita compreender, transformar
+                e avançar.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -677,7 +740,7 @@
 
           <article class="area">
             <div class="area-number">05</div>
-            <h3>Relações e dificuldades emocionais</h3>
+            <h3>Relações e desafios emocionais</h3>
             <p>
               Compreender padrões relacionais, emoções e dificuldades
               que podem interferir no bem-estar.
@@ -738,11 +801,17 @@
             <h3>Escolha um horário que lhe seja conveniente.</h3>
 
             <p>
-              Consulte diretamente a agenda de marcações e veja os
-              horários disponíveis em tempo real.
+              Consulte diretamente a agenda de marcações e veja os horários
+              disponíveis em tempo real.
             </p>
 
-            <a href="https://calendar.app.google/kUagTLrthW1sfXRaA"
+            <p>
+              Após o agendamento, receberá no seu email o link de acesso à
+              consulta. No dia e à hora marcados, basta clicar no link para
+              entrar na consulta online.
+            </p>
+
+            <a href="https://calendar.app.google/6eTbAqkoNmY1NhzY6"
                target="_blank"
                rel="noopener noreferrer"
                class="button button-primary">
@@ -762,17 +831,36 @@
         <div class="section-header">
           <div class="section-label">Contactos</div>
           <h2>Estou disponível para esclarecer<br>qualquer questão.</h2>
+          <div class="contact-intro">
+            <p>
+              Se pretende obter mais informações sobre as consultas ou esclarecer
+              alguma dúvida antes de marcar, pode entrar em contacto comigo
+              através de email ou WhatsApp.
+            </p>
+          </div>
         </div>
 
-        <div class="contact-box">
-          <div>
-            <h3>Contacto por email</h3>
-            <p>Para informações ou questões sobre o acompanhamento psicológico.</p>
+        <div class="contact-options">
+          <div class="contact-card">
+            <h3>Email</h3>
+            <p>mariahomemthemudo.psicologia@gmail.com</p>
+            <a href="mailto:mariahomemthemudo.psicologia@gmail.com" class="contact-button">
+              Enviar email
+              <span class="arrow">→</span>
+            </a>
           </div>
 
-          <a href="mailto:mariahomemthemudo.psicologia@gmail.com" class="email">
-            mariahomemthemudo.psicologia@gmail.com
-          </a>
+          <div class="contact-card">
+            <h3>WhatsApp</h3>
+            <p>Envie uma mensagem diretamente pelo WhatsApp.</p>
+            <a href="https://wa.me/351916478641"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="contact-button">
+              Enviar mensagem pelo WhatsApp
+              <span class="arrow">→</span>
+            </a>
+          </div>
         </div>
 
       </div>
@@ -782,8 +870,11 @@
 
   <footer>
     <div class="container footer-inner">
-      <span>© Maria Homem Themudo — Psicóloga Clínica</span>
-      <span>Psicologia Clínica</span>
+      <div class="footer-professional">
+        <strong>Maria Homem Themudo — Psicóloga Clínica</strong>
+        <span>Cédula Profissional nº 012255</span>
+      </div>
+      <span>© Maria Homem Themudo</span>
     </div>
   </footer>
 
